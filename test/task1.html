@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<style>
+
+	button{
+
+
+		border-radius:5px;
+		padding: 10px;
+
+	}
+
+	.container{
+
+		width: 80px;
+
+		margin: 10px auto;
+	}
+
+p{
+      padding: 20px 8px;
+
+	  text-align: center;
+
+  
+}
+
+
+
+.change{
+
+
+margin: 0 auto;
+margin-bottom: 30px;
+border-bottom: 6px blue solid;
+width: 0px;
+-webkit-transition-property: width;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function:ease;
+
+}
+
+
+.change.active{
+
+	width: 100%;
+	
+}
+p.active{
+
+	color:blue;
+
+}
+
+
+</style>
+</head>
+<body>
+	<div class="container">
+		
+		<p>前端学院</p>
+       <div class="change"></div>
+
+        <button>切换样式</button>	
+
+	</div>
+	
+
+
+</body>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+     $('button').click(function(){
+
+    $("p,.change").toggleClass("active");
+
+      
+
+
+     });
+
+
+	});
+</script>
+</html>
